@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tv_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="本机IP："
+        android:textSize="23sp" />
+
+    <EditText
+        android:id="@+id/et_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_my_port"
+        android:layout_below="@+id/et_my_port"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="请输入目标IP地址"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="number|text"
+        android:singleLine="true"
+        android:text="172.168.66.78" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_ip"
+        android:layout_below="@+id/et_ip"
+        android:ems="10"
+        android:hint="请输入目标PORT地址"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="number"
+        android:singleLine="true"
+        android:text="4455" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="65dp"
+        android:layout_marginRight="32dp"
+        android:text="开始发送音频" />
+
+    <Button
+        android:id="@+id/btn_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_send"
+        android:layout_alignBottom="@+id/btn_send"
+        android:layout_alignLeft="@+id/et_port"
+        android:text="开始接收音频" />
+
+    <EditText
+        android:id="@+id/et_my_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_ip"
+        android:layout_below="@+id/tv_ip"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="请输入本机接收数据端口号"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="number"
+        android:singleLine="true"
+        android:text="4455" />
+
+    <TextView
+        android:id="@+id/tv_state_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_port"
+        android:layout_below="@+id/et_port"
+        android:layout_marginTop="44dp"
+        android:text="这里显示状态" />
+
+    <TextView
+        android:id="@+id/tv_state_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_state_1"
+        android:layout_alignBottom="@+id/tv_state_1"
+        android:layout_alignLeft="@+id/btn_send"
+        android:text="这里显示状态2" />
+
+    <EditText
+        android:id="@+id/et_audio_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_ip"
+        android:layout_toRightOf="@+id/tv_state_2"
+        android:ems="10"
+        android:text="1"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_my_port"
+        android:layout_alignRight="@+id/et_audio_source"
+        android:text="音源0~4"
+        android:visibility="invisible"
+        android:textSize="23sp" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_receive"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:text="停止录音" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:id="@+id/Exit"
+        android:layout_below="@+id/btn_receive"
+        android:layout_alignLeft="@+id/btn_send"
+        android:onClick="onClick4"/>
+
+</RelativeLayout>

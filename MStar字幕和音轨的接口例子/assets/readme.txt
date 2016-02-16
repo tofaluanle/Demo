@@ -1,0 +1,4 @@
+1、字幕实际上是用textview显示的
+2、BorderTextViews类实际上就是TextView，只不过加了个边框
+3、VideoPlayView类是MStar使用的，里面有些关于设置字幕和音频的方法可以参考
+

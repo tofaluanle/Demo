@@ -1,0 +1,10 @@
+.DS_Store
+/captures
+**/build
+**/bin
+**/gen
+**/local.properties
+**/.idea
+**/*.iml
+**/.gradle
+/test
